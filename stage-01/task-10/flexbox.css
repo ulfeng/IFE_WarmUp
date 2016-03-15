@@ -1,0 +1,98 @@
+@charset "UTF-8";
+
+/**
+ * 
+ * @authors ulfeng (1104506375@qq.com)
+ * @date    2016-03-15 14:25:32
+ * @version 1.0
+ */
+
+body {
+    background-color: #ccc;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin: 50px 0;
+}
+
+
+/* flexbox */
+
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-box {
+    width: 150px;
+    padding: 20px;
+    margin: 0 0 20px;
+}
+
+.flex-box1 {
+    height: 120px;
+}
+
+.flex-box2 {
+    height: 100px;
+}
+
+.flex-box3 {
+    height: 40px;
+}
+
+.flex-box3 h2,
+.flex-box3 p {
+    margin: 0;
+}
+
+.flex-box4 {
+    height: 200px;
+}
+
+.border-red {
+    border: 1px solid #f00;
+}
+
+.border-blue {
+    border: 1px solid blue;
+}
+
+.descri {
+    margin: 150px 0 0;
+    text-align: center;
+}
+
+.descri a {
+    text-decoration: none;
+    color: #000;
+}
+
+.descri a:hover {
+    text-decoration: underline;
+}
+
+/* tablet */
+@media screen and (max-width: 800px){
+	.descri {
+        margin: 20px 0 0;
+    }
+}
+
+/* mobile */
+@media screen and (max-width: 640px) {
+    .container {
+        align-items: flex-start;
+    }
+    .flex-box4 {
+        order: -1;
+    }
+    h1 {
+        font-size: 17px;
+    }
+}
