@@ -21,7 +21,7 @@ body {
     margin: 0 auto;
     font-size: 12px;
     font-family: "Microsoft Yahei", NotoSansHans Regular;
-    background: #222;
+    background: #f5f5f5;
     color: #494949;
 }
 
@@ -127,6 +127,7 @@ nav .active {
     overflow: hidden;
     padding: 0 3%;
     background: #fff;
+    margin:0 0 15px;
 }
 
 .tag-box .tag {
@@ -136,16 +137,34 @@ nav .active {
     height: auto;
     overflow: hidden;
     padding: 8% 0;
-    border-bottom: 2px solid #dedede;
     text-align: center;
+}
+
+.tag-box .tag-top{
+    border-bottom: 2px solid #dedede;
+}
+
+.tag-box .tag-bottom li{
+    width:25%;
+    padding-right:5%;
+    border-right:2px solid #dedede;
+}
+.tag-box .tag-bottom li:last-child{
+    border-right:none;
+}
+
+.tag-box .tag-bottom li img{
+    width:100%;
+}
+.tag-box .tag a{
+    color:#494949;
 }
 
 
 /* mobile */
-
 @media screen and (max-width: 640px) {
     /* tag */
-    .tag-box .tag li {
+    .tag-box .tag-top li {
         width:15%;
     }
     .tag-box .tag li img {
