@@ -21,7 +21,7 @@ body {
     margin: 0 auto;
     font-size: 12px;
     font-family: "Microsoft Yahei", NotoSansHans Regular;
-    background: #f5f5f5;
+    background: #222;
     color: #494949;
 }
 
@@ -96,6 +96,7 @@ nav {
     height: 50px;
     line-height: 50px;
     display: flex;
+    background: #fff;
 }
 
 nav a {
@@ -103,11 +104,52 @@ nav a {
     color: #000;
     text-align: center;
 }
+
 nav .active {
-    border-bottom:3px solid #91d4da;
+    border-bottom: 3px solid #91d4da;
 }
 
+
 /* banner */
-.banner img{
-	width:100%;
+
+.banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* tag */
+
+.tag-box {
+    width: 94%;
+    height: auto;
+    overflow: hidden;
+    padding: 0 3%;
+    background: #fff;
+}
+
+.tag-box .tag {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    padding: 8% 0;
+    border-bottom: 2px solid #dedede;
+    text-align: center;
+}
+
+
+/* mobile */
+
+@media screen and (max-width: 640px) {
+    /* tag */
+    .tag-box .tag li {
+        width:15%;
+    }
+    .tag-box .tag li img {
+        width:100%;
+        height: auto;
+    }
 }
