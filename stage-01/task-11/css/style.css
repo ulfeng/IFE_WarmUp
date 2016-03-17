@@ -9,7 +9,6 @@
 
 
 /*通用类*/
-
 * {
     margin: 0;
     padding: 0;
@@ -38,9 +37,20 @@ ul {
     list-style-type: none;
 }
 
+div {
+    float: left;
+}
+
+.container {
+    width: 94%;
+    height: auto;
+    overflow: hidden;
+    padding: 0 3%;
+    background: #fff;
+    margin: 0 0 15px;
+}
 
 /*不同设备字体em基准*/
-
 @media screen and (min-width: 320px) and (max-width: 480px) {
     body {
         font-size: 13.5px;
@@ -70,7 +80,6 @@ ul {
 
 
 /* header */
-
 header {
     width: 100%;
     height: 50px;
@@ -88,9 +97,7 @@ header .href-back {
     background-size: 12px auto;
 }
 
-
 /* nav */
-
 nav {
     width: 100%;
     height: 50px;
@@ -109,8 +116,10 @@ nav .active {
     border-bottom: 3px solid #91d4da;
 }
 
-
 /* banner */
+.banner {
+    width: 100%;
+}
 
 .banner img {
     width: 100%;
@@ -118,18 +127,7 @@ nav .active {
     display: block;
 }
 
-
 /* tag */
-
-.tag-box {
-    width: 94%;
-    height: auto;
-    overflow: hidden;
-    padding: 0 3%;
-    background: #fff;
-    margin:0 0 15px;
-}
-
 .tag-box .tag {
     display: flex;
     justify-content: space-around;
@@ -140,24 +138,137 @@ nav .active {
     text-align: center;
 }
 
-.tag-box .tag-top{
+.tag-box .tag-top {
     border-bottom: 2px solid #dedede;
 }
 
-.tag-box .tag-bottom li{
-    width:25%;
-    padding-right:5%;
-    border-right:2px solid #dedede;
-}
-.tag-box .tag-bottom li:last-child{
-    border-right:none;
+.tag-box .tag-bottom li {
+    width: 25%;
+    padding-right: 5%;
+    border-right: 2px solid #dedede;
 }
 
-.tag-box .tag-bottom li img{
-    width:100%;
+.tag-box .tag-bottom li:last-child {
+    border-right: none;
 }
-.tag-box .tag a{
-    color:#494949;
+
+.tag-box .tag-bottom li img {
+    width: 100%;
+}
+
+.tag-box .tag a {
+    color: #494949;
+}
+
+
+/* module */
+.module h2 {
+    height: 250%;
+    line-height: 250%;
+    border-bottom: 2px solid #dedede;
+    color: #646464;
+    margin-bottom: 5%;
+}
+
+.module-con {
+    width: 100%;
+    margin-bottom: 3%;
+}
+
+.module-con .img-container {
+    width: 25%;
+    height: auto;
+    margin: 0 5% 0 0;
+}
+
+.module-con .img-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.module-con .module-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    width: 70%;
+}
+
+.module-con .module-list a {
+    display: block;
+    width: 45%;
+    height: 200%;
+    line-height: 200%;
+    text-align: center;
+    background: #f8f8f8;
+    color: #494949;
+    margin-bottom: 10px;
+}
+
+
+/* article list 1 */
+.article-list1{
+    padding:3% 3%;
+}
+.article-list1 .img-container {
+    width: 30%;
+    height: auto;
+    margin: 0 5% 0 0;
+}
+
+.article-list1 .img-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.article-con {
+    width: 65%;
+    height: auto;
+}
+
+.article-con h4 {
+    margin-bottom: 8px;
+}
+
+.article-con h4 a {
+    color: #666;
+}
+
+.article-con p {
+    color: #c7c7c7;
+}
+
+
+/* article list 2 */
+.article-list2 h4 {
+    height: 250%;
+    line-height: 250%;
+}
+
+.article-list2 h4 a {
+    color: #666;
+}
+
+.article-list2 .img-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.article-list2 .img-list a {
+    width: 30%;
+}
+
+.article-list2 .img-list a img {
+    width: 100%;
+}
+
+.article-list2 p {
+    color: #c7c7c7;
 }
 
 
@@ -165,10 +276,10 @@ nav .active {
 @media screen and (max-width: 640px) {
     /* tag */
     .tag-box .tag-top li {
-        width:15%;
+        width: 15%;
     }
     .tag-box .tag li img {
-        width:100%;
+        width: 100%;
         height: auto;
     }
 }
