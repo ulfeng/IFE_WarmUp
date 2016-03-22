@@ -67,7 +67,7 @@ function renderAqiList() {
     var aqiTable = document.getElementById('aqi-table');
     var _html = '<tr> <td>城市</td> <td>空气质量</td> <td>操作</td> </tr>';
     for (var city in aqiData) {
-        _html += '<tr><td>' + city + '</td><td>' + aqiData[city] + '</td><td><button data-city="' + city + '">删除<button></button></td>';
+        _html += '<tr><td>' + city + '</td><td>' + aqiData[city] + '</td><td><button data-city="' + city + '">删除</button></td>';
     }
     // 三目运算符
     aqiTable.innerHTML = city ? _html : '';
