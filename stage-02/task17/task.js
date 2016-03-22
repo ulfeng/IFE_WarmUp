@@ -22,6 +22,7 @@ function getDateStr(dat) {
     d = d < 10 ? '0' + d : d;
     return y + '-' + m + '-' + d;
 }
+
 function randomBuildData(seed) {
     var returnData = {};
     var dat = new Date("2016-01-01");
@@ -51,20 +52,30 @@ var chartData = {};
 
 // 记录当前页面的表单选项
 var pageState = {
-    nowSelectCity: -1,
+    nowSelectCity: "北京",
     nowGraTime: "day"
 }
 
-/**
- * 渲染图表
- */
+// 渲染select
+function renderSelect() {
+    var cityList = document.getElementById('city-select');
+    var cityListHtml = '';
+    for (var opt in aqiSourceData) {
+        cityListHtml += '<option>' + opt + '</option>';
+    }
+    cityList.innerHTML = cityListHtml;
+}
+
+// 渲染图表
 function renderChart() {
+    var charWrap = document.getElementById('aqi-chart-wrap');
+    var _html = '<h2>' + pageState.nowSelectCity + '空气质量监测数据</h2>';
+
+
 
 }
 
-/**
- * 日、周、月的radio事件点击时的处理函数
- */
+// 日、周、月的radio事件点击时的处理函数
 function graTimeChange() {
     // 确定是否选项发生了变化
 
@@ -73,9 +84,7 @@ function graTimeChange() {
     // 调用图表渲染函数
 }
 
-/**
- * select发生变化时的处理函数
- */
+// select发生变化时的处理函数
 function citySelectChange() {
     // 确定是否选项发生了变化
 
@@ -84,16 +93,15 @@ function citySelectChange() {
     // 调用图表渲染函数
 }
 
-/**
- * 初始化日、周、月的radio事件，当点击时，调用函数graTimeChange
- */
+// 初始化日、周、月的radio事件，当点击时，调用函数graTimeChange
 function initGraTimeForm() {
+
+    // var aRadio = document.getElementById();
+
 
 }
 
-/**
- * 初始化城市Select下拉选择框中的选项
- */
+// 初始化城市Select下拉选择框中的选项
 function initCitySelector() {
     // 读取aqiSourceData中的城市，然后设置id为city-select的下拉列表中的选项
 
@@ -101,18 +109,15 @@ function initCitySelector() {
 
 }
 
-/**
- * 初始化图表需要的数据格式
- */
+// 初始化图表需要的数据格式
 function initAqiChartData() {
     // 将原始的源数据处理成图表需要的数据格式
     // 处理好的数据存到 chartData 中
 }
 
-/**
- * 初始化函数
- */
+// 初始化
 function init() {
+    renderSelect();
     initGraTimeForm()
     initCitySelector();
     initAqiChartData();
