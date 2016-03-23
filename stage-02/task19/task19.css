@@ -1,0 +1,64 @@
+.container {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.operation div{
+    margin-bottom:20px;
+}
+
+em{
+    color:red;
+}
+
+input {
+    width: 200px;
+    height: 35px;
+    line-height: 35px;
+    border: 1px solid #d9d9d9;
+    text-indent: 0.5em;
+}
+
+input:focus {
+    outline: none;
+}
+
+button {
+    width: 135px;
+    height: 35px;
+    background: #5bc0de;
+    border: 1px solid #5bc0de;
+    color: #fff;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#show{
+    height:298px;
+    width:998px;
+    border:1px solid #ccc;
+    margin-top:20px;
+    color:#fff;
+    text-align: center;
+    line-height: 40px;
+}
+
+#show .divWrap{
+    position: relative;
+    width:15px;
+    height:300px;
+    float:left;
+    margin-left:2px;
+}
+
+#show .divWrap div{
+    width:15px;
+    background: #5bc0de;
+    cursor: pointer;
+    float:left;
+    margin:10px;
+    position: absolute;
+    left:0;
+    bottom:0;
+}
