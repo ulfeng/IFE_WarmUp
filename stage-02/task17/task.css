@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    text-align: center;
+    margin: 30px 0;
+}
+
+#aqi-chart-wrap {
+    width: 1000px;
+    height: 800px;
+    margin: 0 auto;
+}
+
+.column {
+    float: left;
+    height: 550px;
+    position:relative;
+}
+.colSender{
+    position: absolute;
+    left:0;
+    bottom:0;
+}
+
+.day .column, .day .colSender {
+    width: 10px;
+}
+
+.week .column, .week .colSender {
+    width: 25px;
+}
+
+.month .column, .month .colSender {
+    width: 50px;
+}
